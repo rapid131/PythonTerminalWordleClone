@@ -23,8 +23,7 @@ allowable_words= list(set(my_def_words).union(set(my_words)))
 # End section for setting wordle_words and allowable_words variables
 
 def letter_color(wordle_word,my_guessing_word):
-    """Returns a word with the proper coloring for the most recent guess
-    """
+    #Returns a word with the proper coloring for the most recent guess
     word_colored = ['grey','grey','grey','grey','grey']
     checked_letters=[]
     for count in range(0,len(word_colored)):
@@ -38,7 +37,8 @@ def letter_color(wordle_word,my_guessing_word):
             word_colored[count]='grey'   
     return word_colored
 
-def show_alphabet(wordle_word,my_guessing_word,alphabet_color): #This is a program for returning an array of 26 colors that can be applied to an alphabet and printed out
+def show_alphabet(wordle_word,my_guessing_word,alphabet_color): 
+    #This is a program for returning an array of 26 colors that can be applied to an alphabet and printed out
     alphabet= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     wordle_word=wordle_word.upper()
     my_guessing_word = my_guessing_word.upper()
